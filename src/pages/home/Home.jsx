@@ -1,13 +1,18 @@
+import { useState } from "react";
+
 import "./Home.css";
 import Card from "../../components/principal/Card";
+import Maps from "../../components/Maps";
+
 function Home() {
+  const [cidadeSelecionada, setCidadeSelecionada] = useState("");
   const destinos = [
     {
       id: 1,
       nome: "Caribe",
       descricao: "Praias paradisíacas e águas cristalinas",
       preco: "R$ 3.500",
-      imagem: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", // praia azul
+      imagem: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
       localizacao: "Caribbean",
     },
     {
@@ -15,7 +20,7 @@ function Home() {
       nome: "Paris",
       descricao: "A cidade luz e seus encantos",
       preco: "R$ 5.200",
-      imagem: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a", // torre eiffel
+      imagem: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a",
       localizacao: "Paris France",
     },
     {
@@ -23,7 +28,7 @@ function Home() {
       nome: "Tóquio",
       descricao: "Tradição e tecnologia em harmonia",
       preco: "R$ 6.800",
-      imagem: "https://images.unsplash.com/photo-1505069446780-4ef442b5207f", // cidade neon japão
+      imagem: "https://images.unsplash.com/photo-1505069446780-4ef442b5207f",
       localizacao: "Tokyo Japan",
     },
     {
@@ -31,7 +36,7 @@ function Home() {
       nome: "Nova York",
       descricao: "A cidade que nunca dorme",
       preco: "R$ 4.900",
-      imagem: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df", // skyline NY
+      imagem: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df",
       localizacao: "New York USA",
     },
     {
@@ -39,7 +44,7 @@ function Home() {
       nome: "China",
       descricao: "A Grande Muralha e uma cultura milenar impressionante",
       preco: "R$ 5.500",
-      imagem: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d", // muralha da china
+      imagem: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d",
       localizacao: "Great Wall of China",
     },
     {
@@ -85,9 +90,11 @@ function Home() {
               descricao={item.descricao}
               preco={item.preco}
               imagem={item.imagem}
+              onVerMapa={setCidadeSelecionada}
             />
           ))}
         </div>
+        <Maps cidade={cidadeSelecionada} />
       </section>
     </main>
   );

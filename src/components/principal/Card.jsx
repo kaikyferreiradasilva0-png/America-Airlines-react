@@ -1,6 +1,6 @@
 import "./Card.css";
 
-function Card({ nome, descricao, preco, imagem }) {
+function Card({ nome, descricao, preco, imagem, onVerMapa }) {
   return (
     <div className="card">
       <div className="card-image-container">
@@ -13,12 +13,7 @@ function Card({ nome, descricao, preco, imagem }) {
 
         <div className="card-footer">
           <span className="card-price">A partir de {preco}</span>
-          <button
-            className="card-btn"
-            onClick={() =>
-              window.open(`https://www.google.com/maps?q=${nome}`, "_blank")
-            }
-          >
+          <button className="card-btn" onClick={() => onVerMapa(nome)}>
             Ver localização
           </button>
         </div>
