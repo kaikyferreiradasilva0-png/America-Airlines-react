@@ -171,7 +171,10 @@ function Contact() {
                         <label>Aceito os termos</label>
                     </div>
 
-                    <button type="submit">Enviar Mensagem</button>
+                    
+                    <button type="submit" className="submit-btn">
+                        Enviar Mensagem
+                    </button>
 
                 </form>
             </div>

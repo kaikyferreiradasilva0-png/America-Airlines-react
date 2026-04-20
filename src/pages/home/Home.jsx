@@ -1,37 +1,58 @@
 import "./Home.css";
-
+import Card from "../../components/principal/Card";
 function Home() {
   const destinos = [
     {
       id: 1,
       nome: "Caribe",
       descricao: "Praias paradisíacas e águas cristalinas",
-      preco: "A partir de R$ 3.500",
+      preco: "R$ 3.500",
+      imagem: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", // praia azul
+      localizacao: "Caribbean",
     },
     {
       id: 2,
       nome: "Paris",
       descricao: "A cidade luz e seus encantos",
-      preco: "A partir de R$ 5.200",
+      preco: "R$ 5.200",
+      imagem: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a", // torre eiffel
+      localizacao: "Paris France",
     },
     {
       id: 3,
       nome: "Tóquio",
       descricao: "Tradição e tecnologia em harmonia",
-      preco: "A partir de R$ 6.800",
+      preco: "R$ 6.800",
+      imagem: "https://images.unsplash.com/photo-1505069446780-4ef442b5207f", // cidade neon japão
+      localizacao: "Tokyo Japan",
     },
     {
       id: 4,
       nome: "Nova York",
       descricao: "A cidade que nunca dorme",
-      preco: "A partir de R$ 4.900",
+      preco: "R$ 4.900",
+      imagem: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df", // skyline NY
+      localizacao: "New York USA",
+    },
+    {
+      id: 5,
+      nome: "China",
+      descricao: "A Grande Muralha e uma cultura milenar impressionante",
+      preco: "R$ 5.500",
+      imagem: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d", // muralha da china
+      localizacao: "Great Wall of China",
+    },
+    {
+      id: 6,
+      nome: "Dubai",
+      descricao: "Luxo, modernidade e experiências únicas",
+      preco: "R$ 7.200",
+      imagem: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c",
+      localizacao: "Dubai UAE",
     },
   ];
-
   return (
     <main>
-
-      
       <section className="hero">
         <div className="hero-content">
           <h1>Descubra o Mundo</h1>
@@ -40,7 +61,6 @@ function Home() {
         </div>
       </section>
 
-      
       <section className="search-section">
         <div className="search-box">
           <h3>Buscar Viagem</h3>
@@ -54,27 +74,21 @@ function Home() {
         </div>
       </section>
 
-      
       <section className="destinos">
         <h2>Destinos Populares</h2>
 
         <div className="destinos-grid">
           {destinos.map((item) => (
-            <div key={item.id} className="card">
-              <div className="card-img"></div>
-
-              <h3>{item.nome}</h3>
-              <p>{item.descricao}</p>
-
-              <div className="card-footer">
-                <span>{item.preco}</span>
-                <button>Ver Mais</button>
-              </div>
-            </div>
+            <Card
+              key={item.id}
+              nome={item.nome}
+              descricao={item.descricao}
+              preco={item.preco}
+              imagem={item.imagem}
+            />
           ))}
         </div>
       </section>
-
     </main>
   );
 }
