@@ -6,7 +6,7 @@ function Header() {
     return (
         <header>
             <nav>
-                <h1>TechNova</h1>
+                <h1>America Airlines</h1>
                 <ul>
                     <li><Link to="/">Início</Link></li>
                     <li><Link to="/sobre">Sobre</Link></li>
