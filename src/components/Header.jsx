@@ -9,7 +9,7 @@ function Header() {
                 <h1>TechNova</h1>
                 <ul>
                     <li><Link to="/">Início</Link></li>
-                    <li><Link to="/servico">Serviços</Link></li>
+                    <li><Link to="/sobre">Sobre</Link></li>
                     <li><Link to="/contato">Contato</Link></li>
                 </ul>
             </nav>

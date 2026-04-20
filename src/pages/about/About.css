@@ -1,0 +1,56 @@
+.servico-section {
+  padding: 4rem 2rem;
+  background: #f5f7fb;
+}
+
+.servico-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.servico-texto {
+  flex: 1;
+}
+
+.servico-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.servico-texto p {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.servico-item {
+  margin-bottom: 1.5rem;
+}
+
+.servico-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #111827;
+}
+
+.servico-item p {
+  margin: 0;
+  color: #6b7280;
+}
+
+
+.servico-imagem {
+  flex: 1;
+}
+
+.servico-imagem img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
