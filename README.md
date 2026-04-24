@@ -1,18 +1,40 @@
-# React + Vite
+✈️ America Airlines - Site de Viagens  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação web desenvolvida para a America Airlines, uma empresa fictícia de turismo que apresenta destinos populares e um sistema de contato com validação. A aplicação foi construída utilizando React, simulando uma experiência moderna de busca por viagens.
 
-Currently, two official plugins are available:
+🛠️ Tecnologias e Escolhas Técnicas  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O projeto foi desenvolvido com foco em organização, reutilização e boas práticas:
 
-## React Compiler
+- React.js + Vite: Aplicação rápida com atualização em tempo real (HMR)  
+- Componentização: Uso de componentes reutilizáveis como Card, Header e Footer  
+- Props: Dados dinâmicos sendo passados entre componentes  
+- CSS3 (Flexbox & Grid): Layout responsivo adaptado para desktop e mobile  
+- useState: Gerenciamento de estado no formulário e na API  
+- Validação: Validação de e-mail e CPF com lógica matemática  
+- API externa: Integração com OpenStreetMap (fetch) + exibição de mapa via Google Maps (iframe)  
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+🚀 Como Executar o Projeto  
 
-Note: This will impact Vite dev & build performances.
+Pré-requisitos: Node.js instalado  
 
-## Expanding the ESLint configuration
+No terminal, execute:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm install  
+npm run dev  
+
+Após isso, acesse no navegador:
+
+http://localhost:5173  
+
+📂 Metodologia de Desenvolvimento (Git Flow)  
+
+O projeto seguiu boas práticas de versionamento:
+
+- Branch main: contém apenas código estável  
+- Feature Branches: cada funcionalidade foi desenvolvida separadamente  
+- Ex: feature/contact-form, feature/home  
+- Pull Requests: utilizados para integrar as funcionalidades na main  
+
+👨‍💻 Desenvolvedor  
+Kaiky Ferreira da Silva  

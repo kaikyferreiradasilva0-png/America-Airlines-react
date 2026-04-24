@@ -6,7 +6,7 @@ function Maps({ cidade }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // O useEffect deve ficar DENTRO do componente
+ 
   useEffect(() => {
     if (!cidade) return;
     buscarLocal(cidade);
@@ -17,11 +17,10 @@ function Maps({ cidade }) {
 
     setLoading(true);
     setError("");
-    setCoords(null); // Limpa o mapa anterior antes de buscar o novo
+    setCoords(null); 
 
     try {
-      // Corrigido para usar template strings (crases)
-      // O correto é usar crases para que o ${cidade} funcione:
+     
       const res = await fetch(
         `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(termoBusca)}&format=json`,
       );

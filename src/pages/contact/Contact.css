@@ -1,11 +1,9 @@
-/* Página */
 .contact-page {
   padding: 4rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Container */
 .contact-container {
   display: flex;
   gap: 3rem;
@@ -15,14 +13,13 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Texto */
 .contact-info {
   flex: 1;
 }
 
 .contact-info h2 {
   font-size: 2.2rem;
-  color: #003366; /* padrão do seu site */
+  color: #003366; 
   margin-bottom: 1rem;
 }
 
@@ -32,7 +29,6 @@
   margin-bottom: 1rem;
 }
 
-/* Form */
 .contact-form {
   flex: 1;
   display: flex;
@@ -40,7 +36,6 @@
   gap: 1.2rem;
 }
 
-/* Grupo */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -52,7 +47,6 @@
   color: #333;
 }
 
-/* Inputs */
 .form-group input,
 .form-group textarea {
   padding: 0.8rem;
@@ -69,7 +63,6 @@
   box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
 }
 
-/* ERRO */
 .input-error {
   border-color: red !important;
 }
@@ -79,16 +72,15 @@
   font-size: 0.85rem;
 }
 
-/* Checkbox */
 .checkbox-group {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Botão */
+
 .submit-btn {
-  background: #ff7a00; /* igual seu Home */
+  background: #ff7a00; 
   color: white;
   border: none;
   padding: 0.9rem;
@@ -101,8 +93,12 @@
 .submit-btn:hover {
   background: #e66900;
 }
-
-/* RESPONSIVO */
+@media (min-width: 1200px) {
+  .contact-container {
+    gap: 4rem;
+    padding: 4rem;
+  }
+}
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;

@@ -90,7 +90,6 @@ function Contact() {
         console.log('Dados enviados:', formData);
         alert('Mensagem enviada com sucesso!');
 
-        // ⚠️ CORREÇÃO: reset completo
         setFormData({
             nome: '',
             cpf: '',
@@ -105,18 +104,19 @@ function Contact() {
             <div className="contact-container">
 
                 <div className="contact-info">
-                    <h2>Vamos conversar?</h2>
+                    <h2>Entre em Contato</h2>
                     <p>
-                        Quer escalar seu próximo projeto? Nossa equipe está pronta para ajudar.
+                        Se você tem dúvidas, sugestões ou apenas quer dizer oi, estamos aqui para ouvir! Preencha o formulário ao lado e nossa equipe entrará em contato o mais breve possível.
                     </p>
                 </div>
 
                 <form className="contact-form" onSubmit={handleSubmit}>
 
                     <div className="form-group">
-                        <label>Nome</label>
+                        <label htmlFor="nome">Nome</label>
                         <input
                             type="text"
+                            id="nome"
                             name="nome"
                             value={formData.nome}
                             onChange={handleChange}
@@ -125,9 +125,10 @@ function Contact() {
                     </div>
 
                     <div className="form-group">
-                        <label>CPF</label>
+                        <label htmlFor="cpf">CPF</label>
                         <input
                             type="text"
+                            id="cpf"
                             name="cpf"
                             value={formData.cpf}
                             onChange={handleChange}
@@ -138,9 +139,10 @@ function Contact() {
                     </div>
 
                     <div className="form-group">
-                        <label>E-mail</label>
+                        <label htmlFor="email">E-mail</label>
                         <input
                             type="email"
+                            id="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
@@ -151,8 +153,9 @@ function Contact() {
                     </div>
 
                     <div className="form-group">
-                        <label>Mensagem</label>
+                        <label htmlFor="mensagem">Mensagem</label>
                         <textarea
+                            id="mensagem"
                             name="mensagem"
                             value={formData.mensagem}
                             onChange={handleChange}
@@ -163,15 +166,15 @@ function Contact() {
                     <div className="form-group checkbox-group">
                         <input
                             type="checkbox"
+                            id="aceitaTermos"
                             name="aceitaTermos"
                             checked={formData.aceitaTermos}
                             onChange={handleChange}
                             required
                         />
-                        <label>Aceito os termos</label>
+                        <label htmlFor="aceitaTermos">Aceito os termos</label>
                     </div>
 
-                    
                     <button type="submit" className="submit-btn">
                         Enviar Mensagem
                     </button>
